@@ -1,0 +1,12 @@
+.space_between {
+    margin-bottom: 2%;
+    height: 40%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.pcenter {
+    text-align: center;
+}
