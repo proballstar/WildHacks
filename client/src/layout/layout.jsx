@@ -11,15 +11,24 @@ function Layout() {
         return _name_ == pathName
     }
 
-    isActive('/form')
-    
-    isActive('/map')
+    const routes = [
+        { pathName: '/', name: 'Camera Screen'},
+        { pathName: '/form', name: 'Form Screen'},
+        { pathName: '/map', name: 'Map Screen'}
+    ]
+
 
     return (
         <div className={`bg-green-500 p-2`}>
-            <button className={`p-2 outline-none`}>Camera Screen</button>
-            <button className={`p-2 outline-none`}>Form Screen</button>
-            <button className={`p-2 outline-none`}>MapScreen</button>
+            <button onClick={() => history.push('/')} className={`p-2 outline-none ${pathName == '/' ? 'text-white' : 'text-black'}`}>
+                Camera Screen
+            </button>
+            <button onClick={() => history.push('/form')} className={`p-2 outline-none ${pathName == '/form' ? 'text-white' : 'text-black'}`}>
+                Form Screen
+            </button>
+            <button  onClick={() => history.push('/map')} className={`p-2 outline-none ${pathName == '/map' ? 'text-white' : 'text-black'}`}>
+                MapScreen
+            </button>
         </div>
     )
 }
