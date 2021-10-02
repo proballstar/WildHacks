@@ -25982,6 +25982,11 @@ video {
     outline: 0;
   }
 
+  .outline-none {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
   .lg\:focus\:outline-none:focus {
     outline: 0;
   }
